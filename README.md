@@ -1,3 +1,6 @@
 # Trybe-exercises
 ## Meu repositório de exercícios
-Atualização para treinar o pull request
+
+Aqui irei exibir os exercícios e projetos que irei desenvolver durante o curso da Trybe.
+
+Fique a vontade!
