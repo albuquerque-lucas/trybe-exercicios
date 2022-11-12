@@ -1,0 +1,8 @@
+@import './_variables.scss';
+
+body{
+    font-family: $font-primary;
+    background-color: $color-body-background;
+    color: $color-font;
+    margin: 0;
+}
