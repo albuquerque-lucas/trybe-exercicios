@@ -1,0 +1,63 @@
+body {
+  font-family: Roboto, sans-serif;
+  background-color: rgb(30, 33, 36);
+  color: white;
+  margin: 0;
+}
+
+#navigation-bar {
+  background-color: rgb(40, 43, 48);
+  padding: 5px;
+  height: 5rem;
+}
+#navigation-bar ul {
+  display: flex;
+}
+#navigation-bar ul li {
+  background-color: rgb(66, 69, 73);
+  list-style: none;
+  margin: 3px 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#navigation-bar ul li:hover {
+  text-shadow: 0 0 1px white;
+  background-color: rgb(40, 43, 48);
+}
+#navigation-bar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#articles {
+  margin: 0 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#articles header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+#articles header h1 {
+  font-size: 55px;
+}
+#articles header img {
+  max-width: 700px;
+  max-height: 500px;
+}
+#articles .article #general-info {
+  width: 50rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 0.5rem 1rem;
+  padding: 1rem;
+}
+#articles .article #general-info .info .table tbody th, #articles .article #general-info .info .table tbody td {
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}/*# sourceMappingURL=style.css.map */

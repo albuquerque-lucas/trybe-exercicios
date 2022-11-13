@@ -1,0 +1,26 @@
+@import '../abstract/_variables.scss';
+
+#navigation-bar{
+    background-color: $color-primary;
+    padding: 5px;
+    height: 5rem;
+    ul{
+        display: flex;
+        li{
+            background-color: $color-secondary;
+            list-style: none;
+            margin: 3px 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            &:hover{
+                text-shadow: 0 0 1px white;
+                background-color: $color-primary;
+            }
+            a{
+                color: $color-font;
+                text-decoration: none;
+            }
+        }
+    }
+}
