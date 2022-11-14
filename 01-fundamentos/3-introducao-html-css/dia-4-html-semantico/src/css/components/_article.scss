@@ -23,12 +23,12 @@
 
     }
     .article{
-        #general-info{
+        #general-info, .aditional-info{
             display: flex;
             align-items: center;
             justify-content: space-between;
             font-weight: bold;
-            width: 47rem;
+            width: 36rem;
             height: 20rem;
             border: 15px solid white;
             border-radius: 15px;

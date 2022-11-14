@@ -52,12 +52,12 @@ body {
   max-width: 40rem;
   max-height: 45rem;
 }
-#articles .article #general-info {
+#articles .article #general-info, #articles .article .aditional-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-weight: bold;
-  width: 47rem;
+  width: 36rem;
   height: 20rem;
   border: 15px solid white;
   border-radius: 15px;
@@ -65,14 +65,14 @@ body {
   padding: 1rem 2rem;
   transition: all 0.1s ease-out;
 }
-#articles .article #general-info:hover {
+#articles .article #general-info:hover, #articles .article .aditional-info:hover {
   box-shadow: 0 0 6px white;
   transform: scale(1.075);
 }
-#articles .article #general-info .info .content .table {
+#articles .article #general-info .info .content .table, #articles .article .aditional-info .info .content .table {
   border: 2px solid white;
 }
-#articles .article #general-info img {
+#articles .article #general-info img, #articles .article .aditional-info img {
   width: 350px;
   height: 220px;
   margin-left: 4rem;
