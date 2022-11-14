@@ -1,12 +1,12 @@
 body {
   font-family: Roboto, sans-serif;
-  background-color: rgb(30, 33, 36);
+  background-color: rgb(40, 43, 48);
   color: white;
   margin: 0;
 }
 
 #navigation-bar {
-  background-color: rgb(40, 43, 48);
+  background-color: rgb(30, 33, 36);
   padding: 5px;
   height: 5rem;
 }
@@ -23,7 +23,7 @@ body {
 }
 #navigation-bar ul li:hover {
   text-shadow: 0 0 1px white;
-  background-color: rgb(40, 43, 48);
+  background-color: rgb(114, 137, 218);
 }
 #navigation-bar ul li a {
   color: white;
@@ -31,7 +31,7 @@ body {
 }
 
 #articles {
-  margin: 0 1rem;
+  margin: 0 13rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -44,20 +44,36 @@ body {
   margin-bottom: 4rem;
 }
 #articles header h1 {
-  font-size: 55px;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
 }
 #articles header img {
-  max-width: 700px;
-  max-height: 500px;
+  max-width: 40rem;
+  max-height: 45rem;
 }
 #articles .article #general-info {
-  width: 50rem;
-  border: 2px solid white;
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  width: 47rem;
+  height: 20rem;
+  border: 15px solid white;
+  border-radius: 15px;
   margin: 0.5rem 1rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  transition: all 0.1s ease-out;
 }
-#articles .article #general-info .info .table tbody th, #articles .article #general-info .info .table tbody td {
-  border-bottom: 1px solid white;
-  border-top: 1px solid white;
+#articles .article #general-info:hover {
+  box-shadow: 0 0 6px white;
+  transform: scale(1.075);
+}
+#articles .article #general-info .info .content .table {
+  border: 2px solid white;
+}
+#articles .article #general-info img {
+  width: 350px;
+  height: 220px;
+  margin-left: 4rem;
 }/*# sourceMappingURL=style.css.map */
