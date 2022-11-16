@@ -7,6 +7,7 @@ body {
 
 #navigation-bar {
   background-color: rgb(30, 33, 36);
+  border-bottom: 3px solid rgb(40, 43, 48);
   padding: 5px;
   height: 5rem;
 }
@@ -30,50 +31,41 @@ body {
   text-decoration: none;
 }
 
-#articles {
-  margin: 0 13rem;
+#article {
   min-height: 100vh;
+  margin: 0 15rem;
+  color: black;
+  background-color: rgb(254, 239, 212);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#articles header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 4rem;
-}
-#articles header h1 {
-  font-size: 45px;
+#article #main-title {
+  width: 75%;
+  font-size: 2.5rem;
+  margin: 5rem 1rem 3rem 1rem;
   text-align: center;
   text-transform: uppercase;
 }
-#articles header img {
-  max-width: 40rem;
-  max-height: 45rem;
+#article #main-img {
+  width: 550px;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-#articles .article #general-info, #articles .article .aditional-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: bold;
-  width: 36rem;
-  height: 20rem;
-  border: 15px solid white;
+#article .info {
+  background-color: rgb(40, 43, 48);
+  margin: 1rem 0;
+  padding: 1rem;
   border-radius: 15px;
-  margin: 0.5rem 1rem;
-  padding: 1rem 2rem;
-  transition: all 0.1s ease-out;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#articles .article #general-info:hover, #articles .article .aditional-info:hover {
-  box-shadow: 0 0 6px white;
-  transform: scale(1.075);
+#article .info aside {
+  align-self: start;
 }
-#articles .article #general-info .info .content .table, #articles .article .aditional-info .info .content .table {
-  border: 2px solid white;
-}
-#articles .article #general-info img, #articles .article .aditional-info img {
-  width: 350px;
-  height: 220px;
-  margin-left: 4rem;
+#article .info aside table {
+  text-align: start;
 }/*# sourceMappingURL=style.css.map */

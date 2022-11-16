@@ -1,58 +1,38 @@
 @import '../abstract/_variables.scss';
 
-#articles{
-    margin: 0 13rem;
+#article{
     min-height: 100vh;
+    margin: 0 15rem;
+    color: black;
+    background-color: $color-article-background;
     display: flex;
     flex-direction: column;
     align-items: center;
-    header{
+    #main-title{
+        width: 75%;
+        font-size: 2.5rem;
+        margin: 5rem 1rem 3rem 1rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    #main-img{
+        width: 550px;
+        height: 320px;
+        object-fit: cover;
+    }
+    .info{
+        background-color: $color-primary;
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 15px;
+        width: 90%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 4rem;
-        h1{
-            font-size: 45px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-        img{
-            max-width: 40rem;
-            max-height: 45rem;
-        };
-
-    }
-    .article{
-        #general-info, .aditional-info{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-weight: bold;
-            width: 36rem;
-            height: 20rem;
-            border: 15px solid white;
-            border-radius: 15px;
-            margin: .5rem 1rem;
-            padding: 1rem 2rem;
-            transition: all .1s ease-out;
-            &:hover{
-                box-shadow: 0 0 6px  white;
-                transform: scale(1.075);
-            }
-            .info{
-                .content{
-                    .table{
-                        border: 2px solid white;
-                    }
-
-                }
-                
-
-            }
-            img{
-                width: 350px;
-                height: 220px;
-                margin-left: 4rem;
+        aside{
+            align-self: start;
+            table{
+                text-align: start;
             }
         }
     }
