@@ -10,7 +10,6 @@ function imprimeNumeros(array)
 }
 
 // EXERCÍCIO 2
-
 function somaValores(array)
 {
     let soma = 0;
@@ -21,5 +20,13 @@ function somaValores(array)
 
     return soma;
 }
+
+//EXERCÍCIO 3
+function calculaMedia(array)
+{
+    return somaValores(array)/array.length;
+}
+
+console.log(calculaMedia(numbers));
 
 
