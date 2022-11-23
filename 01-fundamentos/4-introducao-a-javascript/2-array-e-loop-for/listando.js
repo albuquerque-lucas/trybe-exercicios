@@ -27,6 +27,18 @@ function calculaMedia(array)
     return somaValores(array)/array.length;
 }
 
-console.log(calculaMedia(numbers));
+//EXERCÍCIO 4
+function verificaSeMaior(valor, comparador)
+{
+    if(valor <= comparador){
+        return `Valor menor ou igual a ${comparador}`;
+    } else{
+        return `Valor maior que ${comparador}`;
+    }
+}
+
+let valor = calculaMedia(numbers);
+
+console.log(verificaSeMaior(valor, 20));
 
 
