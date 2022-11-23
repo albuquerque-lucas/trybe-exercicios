@@ -72,7 +72,7 @@ function validaTriangulo(angulo1, angulo2, angulo3)
     }
 }
 
-validaTriangulo(a, b, c);
+// validaTriangulo(a, b, c);
 
 
 // maiorDeTres(a, b, c);
