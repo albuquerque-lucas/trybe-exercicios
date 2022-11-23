@@ -1,6 +1,6 @@
-const a = 13;
-const b = 5;
-const c = 10;
+const a = 80;
+const b = 60;
+const c = 20;
 
 function operacao(primeiroNumero, segundoNumero, operador)
 {
@@ -28,22 +28,35 @@ function operacao(primeiroNumero, segundoNumero, operador)
 function maiorNumero(primeiroNumero, segundoNumero)
 {
     if(primeiroNumero > segundoNumero){
-        console.log(primeiroNumero);
+        return primeiroNumero;
     } else if(primeiroNumero == segundoNumero){
-        console.log('Os dois números são iguais!')
+        return 0;
     } else{
-        console.log(segundoNumero);
+        return segundoNumero;
     }
 }
 
 function maiorDeTres(primeiroNumero, segundoNumero, terceiroNumero)
 {
+    let maior;
 
-    
+    if(maiorNumero(primeiroNumero, segundoNumero) == maiorNumero(primeiroNumero, terceiroNumero))
+    {
+        maior = primeiroNumero;
+    } else if(maiorNumero(segundoNumero, terceiroNumero) == maiorNumero(primeiroNumero, terceiroNumero)){
+        maior = terceiroNumero;
+    } else if(maiorNumero(segundoNumero, terceiroNumero) == maiorNumero(primeiroNumero, segundoNumero)){
+        maior = segundoNumero;
+    }
+
+    console.log(maior);
 
 }
 
-maiorNumero(a, b);
+
+maiorDeTres(a, b, c);
+
+// maiorNumero(a, b);
 
 // operacao(a, b, '+');
 // operacao(a, b, '-');
