@@ -103,7 +103,3 @@ function divideItemsArray(array)
     return newArray;
 }
 
-let array = imprimeArray(25);
-
-console.log(divideItemsArray(array));
-
