@@ -102,4 +102,3 @@ function divideItemsArray(array)
 
     return newArray;
 }
-
