@@ -107,3 +107,5 @@ let array = imprimeArray(25);
 
 console.log(divideItemsArray(array));
 
+//
+
