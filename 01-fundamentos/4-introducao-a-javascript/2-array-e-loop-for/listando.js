@@ -37,8 +37,24 @@ function verificaSeMaior(valor, comparador)
     }
 }
 
-let valor = calculaMedia(numbers);
 
-console.log(verificaSeMaior(valor, 20));
+//EXERCÍCIO 5
+function maiorValor(array)
+{
+    let hightest = array[0];
+
+    for(i = 1; i < array.length; i ++){
+
+        if(array[i] > hightest){
+            hightest = array[i];
+        }
+
+    }
+
+    return hightest;
+}
+
+console.log(maiorValor(numbers));
+
 
 
