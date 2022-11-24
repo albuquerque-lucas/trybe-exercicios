@@ -70,7 +70,20 @@ function menorValor(array)
     return lowest;
 }
 
-console.log(menorValor(numbers));
+//EXERCÍCIO 7
+function imprimeArray(maximo)
+{
 
+    let array = [];
 
+    for(i = 1; i <= maximo; i++){
+
+        array.push(i);
+
+    }
+
+    console.log(array);
+}
+
+imprimeArray(25);
 
