@@ -82,8 +82,28 @@ function imprimeArray(maximo)
 
     }
 
-    console.log(array);
+    return array;
 }
 
-imprimeArray(25);
+//EXERCÍCIO 8
+function divideItemsArray(array)
+{
+
+    let newArray = [];
+
+    for(i = 0; i < array.length; i++){
+
+        dividedItem = array[i]/2;
+
+        newArray.push(dividedItem);
+
+
+    }
+
+    return newArray;
+}
+
+let array = imprimeArray(25);
+
+console.log(divideItemsArray(array));
 
