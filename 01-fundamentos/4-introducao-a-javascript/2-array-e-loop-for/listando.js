@@ -27,6 +27,8 @@ function calculaMedia(array)
     return somaValores(array)/array.length;
 }
 
+
+
 //EXERCÍCIO 4
 function verificaSeMaior(valor, comparador)
 {
@@ -41,17 +43,17 @@ function verificaSeMaior(valor, comparador)
 //EXERCÍCIO 5
 function maiorValor(array)
 {
-    let hightest = array[0];
+    let maiorValor = array[0];
 
     for(i = 1; i < array.length; i ++){
 
-        if(array[i] > hightest){
-            hightest = array[i];
+        if(array[i] > maiorValor){
+            maiorValor = array[i];
         }
 
     }
 
-    return hightest;
+    return maiorValor;
 }
 
 //EXERCÍCIO 6
@@ -59,7 +61,7 @@ function menorValor(array)
 {
     let lowest = array[0];
 
-    for(i = array.length - 1; i > 0; i--){
+    for(i = 0; i < array.length; i++){
 
         if(array[i] < lowest){
             lowest = array[i];
