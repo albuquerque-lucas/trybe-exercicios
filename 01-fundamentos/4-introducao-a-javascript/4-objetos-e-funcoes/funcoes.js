@@ -14,5 +14,3 @@ function verifyPalindrome(word)
 
     return verification;
 }
-
-console.log(verifyPalindrome('arara'));
