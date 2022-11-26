@@ -63,5 +63,3 @@ function numeroPrimo(numero)
     return resultado;
 
 }
-
-console.log(numeroPrimo(9));
