@@ -14,8 +14,6 @@ function imprimeFatorial(valor)
     return produto;
 }
 
-let array = [1, 4, 23, 65, 352, 7,  10]
-
 //EXERCÍCIO 2
 function trocaLetras(palavra)
 {
@@ -29,4 +27,23 @@ function trocaLetras(palavra)
     
 }
 
-console.log(trocaLetras('tryber'))
+//EXERCÍCIO 3
+let languages = ['java', 'javascript', 'python', 'html', 'css'];
+
+
+function menorPalavra(array)
+{
+    let menor = array[0];
+
+    for (let i = 1; i < array.length; i+=1){
+        
+        if(array[i] < menor){
+            menor = array[i];
+        }
+
+    }
+
+    console.log(menor);
+
+}
+

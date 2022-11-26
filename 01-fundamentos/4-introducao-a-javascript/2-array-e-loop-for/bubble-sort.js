@@ -10,7 +10,7 @@ function retornaArrayMultiplicado(array)
     for(let i = 0; i < array.length; i+=1 ){
 
         
-        if(array[i + 1] != undefined){
+        if(array[i + 1] != array[array.length]){
             newNumbers.push(array[i] *  array[i + 1]);
         } else{
             newNumbers.push(array[i] * 2);
