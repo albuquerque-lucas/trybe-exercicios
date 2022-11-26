@@ -1,5 +1,5 @@
 
-//EXERCÍCIO 1
+// EXERCÍCIO 1
 function imprimeFatorial(valor)
 {
 
@@ -14,7 +14,7 @@ function imprimeFatorial(valor)
     return produto;
 }
 
-//EXERCÍCIO 2
+// EXERCÍCIO 2
 function trocaLetras(palavra)
 {
     let newWord = '';
@@ -27,7 +27,7 @@ function trocaLetras(palavra)
     
 }
 
-//EXERCÍCIO 3
+// EXERCÍCIO 3
 let languages = ['java', 'javascript', 'python', 'html', 'css'];
 
 
@@ -47,3 +47,21 @@ function menorPalavra(array)
 
 }
 
+// EXERCÍCIO 4
+
+function numeroPrimo(numero)
+{
+
+    let resultado;
+
+    if(numero % 2 == 0){
+        resultado = false;
+    } else{
+        resultado = true;
+    }
+
+    return resultado;
+
+}
+
+console.log(numeroPrimo(9))
