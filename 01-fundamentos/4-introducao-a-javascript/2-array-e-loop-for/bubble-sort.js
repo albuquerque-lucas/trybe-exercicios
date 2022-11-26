@@ -17,7 +17,7 @@ function retornaArrayMultiplicado(array)
         }
     
     }
-
+    
     console.log(newNumbers);
 }
 
