@@ -64,4 +64,4 @@ function numeroPrimo(numero)
 
 }
 
-console.log(numeroPrimo(9))
+console.log(numeroPrimo(9));
