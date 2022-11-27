@@ -33,6 +33,19 @@ function biggestIndex(array)
 
 }
 
-const arrayTeste = [2, 3, 6, 7, 10, 1, 55];
+function smallestIndex(array)
+{
+    let smallest = array[0];
+    let smallIndex;
 
-console.log(biggestIndex(arrayTeste));
+    for(let i = 1; i < array.length; i += 1){
+
+        if(array[i] < smallest){
+            
+            smallIndex = i;
+        }
+
+    }
+
+    return smallIndex;
+}
