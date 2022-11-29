@@ -1,13 +1,34 @@
 function retornaQuadrado(numero)
 {
 
-    let string = '*';
-    let finalString = '';
+    let asterisco = '*';
+
+    let espacoVazio = '';
+
+    let pivo = numero - 1;
+
+    for(let i = 0; i < numero; i += 1){
+
+        for(let j = 0; j < numero; j += 1){
+
+            if(j < pivo){
+
+                espacoVazio += ' ';
+
+            } else{
+
+                espacoVazio += asterisco; 
+
+            }
 
 
-    for(let i = 0; i <= numero; i += 1){
-        finalString += string;
-        console.log(finalString);
+
+        }
+
+        console.log(espacoVazio);
+        espacoVazio = '';
+        pivo -= 1;
+
     }
 
 
