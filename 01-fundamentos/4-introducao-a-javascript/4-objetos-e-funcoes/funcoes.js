@@ -101,7 +101,7 @@ function mostRepeatedValue(array)
 }
 
 
-function sumValues(value)
+function addValues(value)
 {
 
     let sum = 0;
@@ -115,4 +115,20 @@ function sumValues(value)
     return sum;
 }
 
-console.log(sumValues(5));
+function verifyLastLetters(word, ending)
+{
+
+    let verification = [];
+
+    for(let i = word.length - 2; i < word.length ; i += 1){
+
+        verification.push(word[i]);
+    }
+
+    let joined = verification.join('');
+
+    let result = ending === joined ? true : false;
+
+    return result;
+
+}
