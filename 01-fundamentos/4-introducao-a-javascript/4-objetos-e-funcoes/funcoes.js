@@ -74,17 +74,32 @@ function numberOfCharacters(array)
 
 function mostRepeatedValue(array)
 {
+    let repeatedNumberCont = 0;
+    let numberCont = 0;
+    let indexCont = 0;
 
     for(let i = 0; i < array.length; i += 1){
-        let contator = 0;
 
+        let verification = array[i];
         
-        console.log(array[i]);
+        for(let j = 0; j < array.length; j++){
+            if(verification === array[j]){
+                numberCont +=  1;
+            }
+        }
+
+        if(numberCont > repeatedNumberCont){
+            repeatedNumberCont = numberCont;
+            indexCont = i;
+        }
+
+        numberCont = 0;
 
     }
 
+    return array[indexCont];
 }
 
-const arrayTeste = [2, 3, 2, 5, 8, 2, 3];
+const arrayTeste = [1, 1, 1, 5, 5, 5, 5, 5, 45, 45, 45, 45, 45, 45, 45, 45, 45];
 
-mostRepeatedValue(arrayTeste);
+console.log(mostRepeatedValue(arrayTeste));
