@@ -100,6 +100,19 @@ function mostRepeatedValue(array)
     return array[indexCont];
 }
 
-const arrayTeste = [1, 1, 1, 5, 5, 5, 5, 5, 45, 45, 45, 45, 45, 45, 45, 45, 45];
 
-console.log(mostRepeatedValue(arrayTeste));
+function sumValues(value)
+{
+
+    let sum = 0;
+
+    for(let i = 1; i <= value; i+=1){
+
+        sum += i;
+
+    }
+
+    return sum;
+}
+
+console.log(sumValues(5));
