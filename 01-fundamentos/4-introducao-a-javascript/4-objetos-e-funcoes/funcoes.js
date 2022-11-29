@@ -50,9 +50,6 @@ function smallestIndex(array)
     return smallIndex;
 }
 
-
-
-
 //Por quê o código não funciona se eu tirar o biggest = array[i].length ?
 function numberOfCharacters(array)
 {
@@ -75,7 +72,63 @@ function numberOfCharacters(array)
 
 }
 
-const arrayTeste = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+function mostRepeatedValue(array)
+{
+    let repeatedNumberCont = 0;
+    let numberCont = 0;
+    let indexCont = 0;
+
+    for(let i = 0; i < array.length; i += 1){
+
+        let verification = array[i];
+        
+        for(let j = 0; j < array.length; j++){
+            if(verification === array[j]){
+                numberCont +=  1;
+            }
+        }
+
+        if(numberCont > repeatedNumberCont){
+            repeatedNumberCont = numberCont;
+            indexCont = i;
+        }
+
+        numberCont = 0;
+
+    }
+
+    return array[indexCont];
+}
 
 
-console.log(numberOfCharacters(arrayTeste));
+function addValues(value)
+{
+
+    let sum = 0;
+
+    for(let i = 1; i <= value; i+=1){
+
+        sum += i;
+
+    }
+
+    return sum;
+}
+
+function verifyLastLetters(word, ending)
+{
+
+    let verification = [];
+
+    for(let i = word.length - 2; i < word.length ; i += 1){
+
+        verification.push(word[i]);
+    }
+
+    let joined = verification.join('');
+
+    let result = ending === joined ? true : false;
+
+    return result;
+
+}
