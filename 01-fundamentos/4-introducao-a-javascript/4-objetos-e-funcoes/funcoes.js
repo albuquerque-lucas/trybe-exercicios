@@ -50,9 +50,6 @@ function smallestIndex(array)
     return smallIndex;
 }
 
-
-
-
 //Por quê o código não funciona se eu tirar o biggest = array[i].length ?
 function numberOfCharacters(array)
 {
@@ -75,7 +72,19 @@ function numberOfCharacters(array)
 
 }
 
-const arrayTeste = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+function mostRepeatedValue(array)
+{
 
+    for(let i = 0; i < array.length; i += 1){
+        let contator = 0;
 
-console.log(numberOfCharacters(arrayTeste));
+        
+        console.log(array[i]);
+
+    }
+
+}
+
+const arrayTeste = [2, 3, 2, 5, 8, 2, 3];
+
+mostRepeatedValue(arrayTeste);
