@@ -1,9 +1,7 @@
-
-
-let test = "XI";
-
 function romanToArabic(string)
 {
+
+    let arrayedString = string.split('');
 
     let romans = {
 
@@ -17,10 +15,9 @@ function romanToArabic(string)
     
     }
 
+    for(let index = 0; index < arrayedString.length; index += 1){
 
-    for(index in romans){
-
-        console.log(index);
+        
 
     }
 
