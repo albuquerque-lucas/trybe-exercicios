@@ -1,9 +1,7 @@
 function retornaQuadrado(numero)
 {
 
-    let asterisco = '*';
-
-    let espacoVazio = '';
+    let finalString = '';
 
     let pivo = numero - 1;
 
@@ -13,11 +11,11 @@ function retornaQuadrado(numero)
 
             if(j < pivo){
 
-                espacoVazio += ' ';
+                finalString += ' ';
 
             } else{
 
-                espacoVazio += asterisco; 
+                finalString += '*'; 
 
             }
 
@@ -25,8 +23,8 @@ function retornaQuadrado(numero)
 
         }
 
-        console.log(espacoVazio);
-        espacoVazio = '';
+        console.log(finalString);
+        finalString = '';
         pivo -= 1;
 
     }
