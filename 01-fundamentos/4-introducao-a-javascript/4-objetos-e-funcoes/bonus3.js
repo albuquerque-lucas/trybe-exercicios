@@ -15,7 +15,7 @@ const basket = [
     'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
     'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
     'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
-    'Banana', 'Pera', 'Abacate', 'Uva',
+    'Banana', 'Pera', 'Abacate',
 ];
 
 
