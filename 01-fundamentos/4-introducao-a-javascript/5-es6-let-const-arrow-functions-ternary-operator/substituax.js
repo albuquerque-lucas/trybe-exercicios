@@ -18,7 +18,7 @@ const substituteX = name => {
 
 }
 
-const minhasSkills = phrase => {
+const mySkills = phrase => {
 
     const skills = ['html', 'css', 'javascript'];
 
@@ -33,4 +33,4 @@ const minhasSkills = phrase => {
 
 }
 
-console.log(minhasSkills(substituteX('Lucas')));
+console.log(mySkills(substituteX('Lucas')));
