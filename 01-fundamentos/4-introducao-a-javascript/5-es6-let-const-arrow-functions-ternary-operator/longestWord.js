@@ -1,7 +1,6 @@
 const longestWord = (phrase) => {
 
     const splitedPhrase = phrase.split(' ');
-
     let biggestWord = splitedPhrase[0];
 
     for(let i = 1; i < splitedPhrase.length; i+= 1){
