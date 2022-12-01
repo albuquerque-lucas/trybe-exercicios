@@ -18,4 +18,19 @@ const substituteX = name => {
 
 }
 
-console.log(substituteX('Lucas'))
+const minhasSkills = phrase => {
+
+    const skills = ['html', 'css', 'javascript'];
+
+
+    return `
+    ${phrase}
+    Minhas três principais habilidades são:
+    - ${skills[0]}
+    - ${skills[1]}
+    - ${skills[2]}
+    `
+
+}
+
+console.log(minhasSkills(substituteX('Lucas')));
