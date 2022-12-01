@@ -17,3 +17,18 @@ const basket = [
     'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
     'Banana', 'Pera', 'Abacate', 'Uva',
 ];
+
+
+function comprimeLista(array)
+{
+
+    let contador = 0;
+    let object = {};
+
+    for(let i = 0; i < array.length; i += 1){
+
+        let fruit = array[i];
+
+    }
+
+}
