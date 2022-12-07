@@ -1,29 +1,37 @@
-const createItems = (length, element, father) => {
+const object = {
 
-    const object = {
+    1:'Um',
+    2:'Dois',
+    3:'Três',
+    4:'Quatro',
+    5:'Cinco',
+    6:'Seis',
+    7:'Sete',
+    8:'Oito',
+    9:'Nove',
+    10:'Dez',
+}
 
-        1:'Um',
-        2:'Dois',
-        3:'Três',
-        4:'Quatro',
-        5:'Cinco',
-        6:'Seis',
-        7:'Sete',
-        8:'Oito',
-        9:'Nove',
-        10:'Dez',
-    }
+
+const createItems = (length, element, father, itemClass, content) => {
+
+
 
     for(let i = 0; i < length; i += 1){
 
         if(element == 'li'){
-            
+            let item = document.createElement(element);
+            father.appendChild(item);
+            item.classList.add(itemClass);
+            item.innerText = content[i + 1];
+        } else if(element == 'h3'){
+            let item = document.createElement(element);
+            father.appendChild(item);
+            item.classList.add(itemClass);
+            item.innerText = content;
         }
 
-        let item = document.createElement(element);
-        father.appendChild(item);
-        item.classList.add('list-item');
-        item.innerText = object[i + 1];
+
         
     }
 
@@ -46,14 +54,14 @@ const ul = document.createElement('ul');
 
 
 image.setAttribute('src', 'https://picsum.photos/200')
+createItems(3, 'h3', main, 'secondary-title', 'subtitulo');
 
 body.appendChild(title);
 body.appendChild(main);
 main.appendChild(sectionCenter);
-sectionCenter.appendChild(centerParagraph);
 main.appendChild(sectionLeft);
 main.appendChild(sectionRight);
-
+sectionCenter.appendChild(centerParagraph);
 sectionLeft.appendChild(image);
 sectionRight.appendChild(ul);
 
@@ -65,4 +73,16 @@ sectionRight.classList.add('right-content');
 image.classList.add('small-image');
 centerParagraph.innerText = text1;
 
-createItems(10, 'li', sectionRight);
+title.classList.add('title');
+
+
+createItems(10, 'li', sectionRight, 'item-list', object);
+
+let secondaryTitle = document.querySelectorAll('.secondary-title');
+secondaryTitle.forEach(element => {
+    element.classList.add('description');
+});
+
+main.removeChild(sectionLeft);
+sectionRight.style.marginRight = 'auto';
+sectionCenter.style.backgroundColor = 'green';
