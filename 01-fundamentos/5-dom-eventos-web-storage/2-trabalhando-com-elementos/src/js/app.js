@@ -54,6 +54,7 @@ const ul = document.createElement('ul');
 
 
 image.setAttribute('src', 'https://picsum.photos/200')
+//image.src = 'https://picsum.photos/200';
 createItems(3, 'h3', main, 'secondary-title', 'subtitulo');
 
 body.appendChild(title);
@@ -86,3 +87,6 @@ secondaryTitle.forEach(element => {
 main.removeChild(sectionLeft);
 sectionRight.style.marginRight = 'auto';
 sectionCenter.style.backgroundColor = 'green';
+
+ul.lastChild.remove();
+ul.lastChild.remove();
