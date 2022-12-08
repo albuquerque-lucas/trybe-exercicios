@@ -44,7 +44,17 @@ const createDaysOfTheMonth = () => {
 
 }
 
+const createButton = (item, itemId, fatherItem, content) => {
+
+    const element = document.createElement(item);
+    const fatherElement = document.querySelector(fatherItem);
+    fatherElement.appendChild(element);
+    element.setAttribute('id', itemId);
+    element.innerText = content;
+}
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
+createButton('button', 'btn-holiday', '.buttons-container', 'Feriados');
 
 // Escreva seu código abaixo.
