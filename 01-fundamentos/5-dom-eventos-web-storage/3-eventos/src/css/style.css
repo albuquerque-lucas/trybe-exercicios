@@ -31,9 +31,15 @@ button {
     display: inline-block;
     font-size: 20px;
     margin: 5px 0;
+    padding: 5px 2px;
     text-align: center;
     vertical-align: middle;
     width: 13.6%;
+}
+
+#days li:hover{
+    background-color: #777;
+    color: white;
 }
 
 .input-container {
@@ -55,14 +61,25 @@ label {
 }
 
 .month-container {
-    background: green;
+    background-image: url('../img/december-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 40px 25px;
     text-align: center;
+    min-height: 30vh;
+}
+
+.month-container ul{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .month-container ul li {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     letter-spacing: 3px;
     list-style-type: none;
     text-transform: uppercase;
@@ -145,6 +162,7 @@ label {
     text-align: center;
     vertical-align: middle;
     width: 13.6%;
+    padding: 5px 3px;
 }
 
 .week-days {
