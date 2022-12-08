@@ -14,7 +14,7 @@ const createDaysOfTheWeek = () => {
 const createDaysOfTheMonth = () => {
     const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
     const holidays = [24, 25, 31];
-    const fridays = [3, 11, 18];
+    const fridays = [4, 11, 18, 25];
     const ulDays = document.querySelector('#days');
 
 
@@ -65,11 +65,34 @@ const changeBackgroundColor = (element, currentEvent, elementTarget) => {
             target[i].classList.toggle('clicked');
         }
 
-
-
     })
+}
+
+const changeFridaysContent = () => {
+
+    const button = document.querySelector('#btn-friday');
+    const fridays = document.querySelectorAll('.friday');
+
+    console.log(button);
+
+    button.addEventListener('click', event =>{
+        event.preventDefault();
+
+        fridays.forEach(element => {
+            let clicked = false;
+
+            if(clicked == false){
+                element.innerText = 'Sextou!!!';
+                clicked = true;
+            } else if(clicked == true){
+                element.innerText = 'Dia';
+                clicked = false;
+            }
 
 
+        })
+
+    });
 
 }
 
@@ -80,5 +103,6 @@ const changeBackgroundColor = (element, currentEvent, elementTarget) => {
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 createButton('button', 'btn-holiday', '.buttons-container', 'Feriados');
-//changeBackgroundColor('#btn-holiday', 'click', '#month');
+createButton('button', 'btn-friday', '.buttons-container', 'Sexta-feira');
 changeBackgroundColor('#btn-holiday', 'click', 'holiday');
+changeFridaysContent();
