@@ -41,6 +41,11 @@ button {
     background-color: rgb(238, 238, 0);
 }
 
+#days li.friday-message{
+    content: 'Sextou!!!';
+    background-color: blue;
+}
+
 /* #days li:hover{
     background-color: #777;
     color: white;

@@ -72,27 +72,36 @@ const changeFridaysContent = () => {
 
     const button = document.querySelector('#btn-friday');
     const fridays = document.querySelectorAll('.friday');
+    const fridaysList = [4, 11, 18, 25];
 
-    console.log(button);
 
     button.addEventListener('click', event =>{
         event.preventDefault();
 
         fridays.forEach(element => {
-            let clicked = false;
+            element.classList.toggle('friday-message');
+        })
+    });
 
-            if(clicked == false){
-                element.innerText = 'Sextou!!!';
-                clicked = true;
-            } else if(clicked == true){
-                element.innerText = 'Dia';
-                clicked = false;
-            }
+}
 
+const zoomDays = () => {
+
+    const days = document.querySelectorAll('.days');
+
+    days.forEach(day => {
+
+        day.addEventListener('mouseover', event => {
+
+            day.style.fontSize = '170%';
 
         })
 
-    });
+        day.addEventListener('mouseout', event => {
+            day.style.fontSize = '100%';
+        })
+
+    })
 
 }
 
@@ -106,3 +115,4 @@ createButton('button', 'btn-holiday', '.buttons-container', 'Feriados');
 createButton('button', 'btn-friday', '.buttons-container', 'Sexta-feira');
 changeBackgroundColor('#btn-holiday', 'click', 'holiday');
 changeFridaysContent();
+zoomDays();
