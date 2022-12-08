@@ -37,10 +37,14 @@ button {
     width: 13.6%;
 }
 
-#days li:hover{
+#days li.clicked{
+    background-color: rgb(238, 238, 0);
+}
+
+/* #days li:hover{
     background-color: #777;
     color: white;
-}
+} */
 
 .input-container {
     width: 49%;
@@ -84,6 +88,10 @@ label {
     list-style-type: none;
     text-transform: uppercase;
 }
+
+/* .month-container ul li.clicked{
+    background: red;
+} */
 
 .my-tasks {
     clear: both;

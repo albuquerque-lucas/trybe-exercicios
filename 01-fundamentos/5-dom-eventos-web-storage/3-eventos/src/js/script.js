@@ -14,7 +14,7 @@ const createDaysOfTheWeek = () => {
 const createDaysOfTheMonth = () => {
     const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
     const holidays = [24, 25, 31];
-    const fridays = [3, 11, 18, 25];
+    const fridays = [3, 11, 18];
     const ulDays = document.querySelector('#days');
 
 
@@ -53,8 +53,32 @@ const createButton = (item, itemId, fatherItem, content) => {
     element.innerText = content;
 }
 
+const changeBackgroundColor = (element, currentEvent, elementTarget) => {
+
+    const item = document.querySelector(element);
+    const target = document.getElementsByClassName(elementTarget);
+
+
+    item.addEventListener(currentEvent, event => {
+        event.preventDefault();
+        for(let i = 0; i < target.length; i += 1){
+            target[i].classList.toggle('clicked');
+        }
+
+
+
+    })
+
+
+
+}
+
+
+
+
+
 createDaysOfTheWeek();
 createDaysOfTheMonth();
 createButton('button', 'btn-holiday', '.buttons-container', 'Feriados');
-
-// Escreva seu código abaixo.
+//changeBackgroundColor('#btn-holiday', 'click', '#month');
+changeBackgroundColor('#btn-holiday', 'click', 'holiday');
