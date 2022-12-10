@@ -90,15 +90,41 @@ const zoomDays = () => {
     const days = document.querySelectorAll('.days');
 
     days.forEach(day => {
-
         day.addEventListener('mouseover', event => {
-
-            day.style.fontSize = '170%';
+            day.style.fontSize = '35px';
 
         })
 
         day.addEventListener('mouseout', event => {
-            day.style.fontSize = '100%';
+            day.style.fontSize = '20px';
+        })
+
+    })
+
+}
+
+const createTask = task => {
+
+    const myTasks = document.querySelector('.my-tasks');
+    const span = document.createElement('span');
+    span.classList.add('task');
+    span.innerText = task;
+    myTasks.appendChild(span);
+
+
+}
+
+const selectTask = () => {
+
+    const tasks = document.querySelectorAll('.task');
+
+    tasks.forEach( task => {
+
+        task.addEventListener('click', event => {
+
+
+            task.classList.toggle('selected');
+
         })
 
     })
@@ -116,3 +142,5 @@ createButton('button', 'btn-friday', '.buttons-container', 'Sexta-feira');
 changeBackgroundColor('#btn-holiday', 'click', 'holiday');
 changeFridaysContent();
 zoomDays();
+createTask('cozinhar');
+selectTask();
