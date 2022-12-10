@@ -72,27 +72,62 @@ const changeFridaysContent = () => {
 
     const button = document.querySelector('#btn-friday');
     const fridays = document.querySelectorAll('.friday');
+    const fridaysList = [4, 11, 18, 25];
 
-    console.log(button);
 
     button.addEventListener('click', event =>{
         event.preventDefault();
 
         fridays.forEach(element => {
-            let clicked = false;
+            element.classList.toggle('friday-message');
+        })
+    });
 
-            if(clicked == false){
-                element.innerText = 'Sextou!!!';
-                clicked = true;
-            } else if(clicked == true){
-                element.innerText = 'Dia';
-                clicked = false;
-            }
+}
 
+const zoomDays = () => {
+
+    const days = document.querySelectorAll('.days');
+
+    days.forEach(day => {
+        day.addEventListener('mouseover', event => {
+            day.style.fontSize = '35px';
 
         })
 
-    });
+        day.addEventListener('mouseout', event => {
+            day.style.fontSize = '20px';
+        })
+
+    })
+
+}
+
+const createTask = task => {
+
+    const myTasks = document.querySelector('.my-tasks');
+    const span = document.createElement('span');
+    span.classList.add('task');
+    span.innerText = task;
+    myTasks.appendChild(span);
+
+
+}
+
+const selectTask = () => {
+
+    const tasks = document.querySelectorAll('.task');
+
+    tasks.forEach( task => {
+
+        task.addEventListener('click', event => {
+
+
+            task.classList.toggle('selected');
+
+        })
+
+    })
 
 }
 
@@ -106,3 +141,6 @@ createButton('button', 'btn-holiday', '.buttons-container', 'Feriados');
 createButton('button', 'btn-friday', '.buttons-container', 'Sexta-feira');
 changeBackgroundColor('#btn-holiday', 'click', 'holiday');
 changeFridaysContent();
+zoomDays();
+createTask('cozinhar');
+selectTask();
