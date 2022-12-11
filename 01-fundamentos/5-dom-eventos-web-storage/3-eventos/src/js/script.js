@@ -131,6 +131,37 @@ const selectTask = () => {
 
 }
 
+const createAssignment = () => {
+    
+    const input = document.querySelector('#task-input');
+    const addButton = document.querySelector('#btn-add');
+    const taskList = document.querySelector('.task-list');
+    
+    addButton.addEventListener('click', event => {
+        event.preventDefault();
+        if(input.value == ''){
+            alert('Para adicionar uma tarefa você precisa digitar algo na caixinha.');
+        } else{
+        const assignment = document.createElement('li');
+        taskList.appendChild(assignment);
+        assignment.innerHTML = input.value;
+        input.value = '';
+        input.focus();;
+        }
+    });
+
+
+input.addEventListener('keypress', event => {
+    if(event.key === "Enter"){
+        const assignment = document.createElement('li');
+        taskList.appendChild(assignment);
+        assignment.innerHTML = input.value;
+        input.value = '';
+        input.focus();;
+    };
+})
+}
+
 
 
 
@@ -144,3 +175,4 @@ changeFridaysContent();
 zoomDays();
 createTask('cozinhar');
 selectTask();
+createAssignment();
