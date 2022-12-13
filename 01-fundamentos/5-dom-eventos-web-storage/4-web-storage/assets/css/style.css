@@ -31,4 +31,11 @@ header ul li {
 header ul li:hover {
   text-shadow: 0 0 1.5px white;
   transform: scale(1.05);
+}
+
+main {
+  text-align: center;
+}
+main h2 {
+  font-style: italic;
 }/*# sourceMappingURL=style.css.map */
