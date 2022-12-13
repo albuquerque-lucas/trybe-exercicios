@@ -15,12 +15,31 @@ window.onload = () => {
     const lineHeightList = document.querySelectorAll('.att-line-height-list li');
     const fontFamilyList = document.querySelectorAll('.att-font-family-list li');
 
-    const changeBackground = (list, target) => {
+    const changeProperty = (list, target, property) => {
         list.forEach(element => {
 
             element.addEventListener('click', event => {
                 for(let i = 0; i < target.length; i += 1){
-                    target[i].style.backgroundColor = element.innerHTML;
+
+                    switch(property){
+                        case 'backgroundColor':
+                            target[i].style.backgroundColor = element.innerHTML;
+                            break;
+                        case 'color':
+                            target[i].style.color = element.innerHTML;
+                            break;
+                        case 'fontSize':
+                            target[i].style.fontSize = element.innerHTML;
+                            break;
+                        case 'lineHeight':
+                            target[i].style.lineHeight = element.innerHTML;
+                            break;
+                        case 'fontFamily':
+                            target[i].style.fontFamily = element.innerHTML;
+                            break;
+                    }
+
+                    //target[i].style.backgroundColor = element.innerHTML;
                 }
             })
         })
@@ -28,7 +47,11 @@ window.onload = () => {
 
 
 
-    changeBackground(backgroundList, paragraphs);
+    changeProperty(backgroundList, paragraphs, 'backgroundColor');
+    changeProperty(colorList, paragraphs, 'color');
+    changeProperty(fontSizeList, paragraphs, 'fontSize');
+    changeProperty(lineHeightList, paragraphs, 'lineHeight');
+    changeProperty(fontFamilyList, paragraphs, 'fontFamily');
 
 
     
