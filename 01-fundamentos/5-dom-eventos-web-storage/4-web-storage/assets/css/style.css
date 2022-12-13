@@ -5,7 +5,7 @@ header {
   border-radius: 15px;
   padding: 1rem;
 }
-header .session-attribute {
+header .attributes {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +35,12 @@ header ul li:hover {
 
 main {
   text-align: center;
+  margin-bottom: 5rem;
 }
 main h2 {
   font-style: italic;
+}
+main p {
+  padding: 1rem;
+  border-radius: 15px;
 }/*# sourceMappingURL=style.css.map */
