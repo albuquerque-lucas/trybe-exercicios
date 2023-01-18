@@ -29,8 +29,9 @@ function sum() {
     } catch(error){
         document.getElementById('result').innerHTML = error.message;
     } finally{
-        value1.value = '';
-        value2.value = '';
+        input1.value = '';
+        input2.value = '';
+        input1.focus();
     }
 
 }
