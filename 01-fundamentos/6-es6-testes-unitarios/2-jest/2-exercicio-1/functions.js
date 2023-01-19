@@ -55,6 +55,7 @@ const decode = (string) => {
   return mapString(map, string);
 }
 
+// EXERCÍCIO 4
 const techList = (list, studentName) => {
 
   if(list.length === 0){
@@ -75,6 +76,8 @@ const techList = (list, studentName) => {
 
 }
 
+
+// EXERCÍCIO 5
 const hydrate = string => {
   let count = 0;
   const array = string.split('');
@@ -97,5 +100,4 @@ const hydrate = string => {
   return `${count} ${glass} de água`;
 }
 
-hydrate('1 copo de água');
 module.exports = {myRemove, myFizzBuzz, encode, decode, techList, hydrate};
