@@ -73,6 +73,29 @@ const techList = (list, studentName) => {
       return objectArray;
   }
 
+}
+
+const hydrate = string => {
+  let count = 0;
+  const array = string.split('');
+  const newArray = [];
+
+  for(let i = 0; i < array.length; i += 1){
+    let newItem = parseInt(array[i]);
+
+    if(newItem){
+      count += newItem;
+    }
+    }
+
+  let glass = 'copo';
+
+  if (count > 1) {
+    glass = 'copos';
   }
 
-module.exports = {myRemove, myFizzBuzz, encode, decode, techList};
+  return `${count} ${glass} de água`;
+}
+
+hydrate('1 copo de água');
+module.exports = {myRemove, myFizzBuzz, encode, decode, techList, hydrate};
