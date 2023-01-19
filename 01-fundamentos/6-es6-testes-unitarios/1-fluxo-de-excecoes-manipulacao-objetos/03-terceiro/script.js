@@ -147,4 +147,4 @@ const createReport = (list, professor) => {
   console.log(report);
 }
 
-createReport(allLessons, 'Maria Clara');
+createReport(allLessons, 'Carlos');
