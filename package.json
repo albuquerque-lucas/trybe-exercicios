@@ -1,0 +1,23 @@
+{
+  "name": "trybe-exercicios",
+  "version": "1.0.0",
+  "description": "Aqui irei exibir os exercícios e projetos que irei desenvolver durante o curso da Trybe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albuquerque-lucas/trybe-exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albuquerque-lucas/trybe-exercicios/issues"
+  },
+  "homepage": "https://github.com/albuquerque-lucas/trybe-exercicios#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
+}
