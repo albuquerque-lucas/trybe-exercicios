@@ -114,10 +114,10 @@ const verifyPair = (list, key, value) => {
 
 // console.log(verifyPair(lesson3, 'numeroEstudantes', 10));
 
-const verifyStudentsViews = (list, sClass) => {
+const verifyStudentsViews = (list, name) => {
   let count = 0;
   for (let i in list) {
-    if(list[i].materia === sClass){
+    if(list[i].materia === name){
       count += list[i].numeroEstudantes;
     }
   }
@@ -125,4 +125,26 @@ const verifyStudentsViews = (list, sClass) => {
   return count;
 }
 
-console.log(verifyStudentsViews(allLessons, 'Matemática'));
+//console.log(verifyStudentsViews(allLessons, 'Matemática'));
+
+const createReport = (list, professor) => {
+  const report = {};
+  const classesArray = [];
+  let teacher = '';
+  let count = 0;
+  for (let i in list) {
+    if (list[i].professor === professor){
+      teacher = list[i].professor;
+      classesArray.push(list[i].materia);
+      count += list[i].numeroEstudantes;
+
+    }
+  }
+
+  report.professor = teacher;
+  report.aulas = classesArray;
+  report.estudantes = count;
+  console.log(report);
+}
+
+createReport(allLessons, 'Maria Clara');
