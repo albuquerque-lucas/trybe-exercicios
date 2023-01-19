@@ -75,17 +75,23 @@ const getValuebByNumber = (list, position) => Object.values(list)[position];
 
 const verifyKeyExistence = (key, list) => {
     if(!list.includes(key)){
-      throw new Error(`O item "${key}" não foi encontrado na tabela.`);
+      throw new Error(`ERRO! O item "${key}" não foi encontrado na tabela.`);
     }
 }
 
-const verifyKeyValue = (list, value, index) => {
-  let correctValue = list[index];
+const verifyKeyValue = (list, key, value) => {
+  let entries = Object.entries(list);
+  let isEqual = false;
   let message = "A combinação de chave e valor é verdadeira";
-  if(correctValue == value){
+
+  for (let index in entries) {
+    if(entries[index][0] === key && entries[index][1] === value) isEqual = true;
+  }
+  
+  if(isEqual){
     return message;
   } else{
-    throw new Error('A combinação de chave e valor especificada não foi encontrada.');
+    throw new Error('ERRO! A combinação de chave e valor especificada não foi encontrada.');
   }
 
 }
@@ -96,15 +102,7 @@ const verifyPair = (list, key, value) => {
 
   try{
     verifyKeyExistence(key, keyList);
-
-    for(index in list){
-      if(key == index){
-        return verifyKeyValue(list, value, index);
-      }
-
-    }
-
-
+    return verifyKeyValue(list, key, value);
   }catch(error){
     return error.message;
   }
@@ -114,4 +112,17 @@ const verifyPair = (list, key, value) => {
 
 }
 
-console.log(verifyPair(lesson3, 'numeroEstudantes', 10));
+// console.log(verifyPair(lesson3, 'numeroEstudantes', 10));
+
+const verifyStudentsViews = (list, sClass) => {
+  let count = 0;
+  for (let i in list) {
+    if(list[i].materia === sClass){
+      count += list[i].numeroEstudantes;
+    }
+  }
+
+  return count;
+}
+
+console.log(verifyStudentsViews(allLessons, 'Matemática'));
