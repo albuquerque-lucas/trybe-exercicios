@@ -5,10 +5,15 @@ let info = {
   nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
 };
 
+let wrongInfo = undefined;
+
 const printMessage = (characterInfo) => {
-  return ('Boas vindas, ' + characterInfo.personagem);
+  if (!characterInfo || characterInfo.personagem === undefined) {
+    throw new Error('objeto inválido');
+  }
+  return ('Boas vindas, '+ characterInfo.personagem);
 };
 
 console.log(printMessage(info));
 
-module.exports = { info, printMessage };
+module.exports = { info, printMessage, wrongInfo };
