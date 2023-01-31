@@ -6,7 +6,7 @@ const warriorDamage = () => {
   const minDamage = warrior.strength;
   const maxDamage = Math.floor(Math.random() * (warrior.strength * warrior.weaponDmg));
   let hit;
-  maxDamage > minDamage ? hit = maxDamage: hit = minDamage;
+  maxDamage > minDamage ? hit = maxDamage : hit = minDamage;
   return hit;
 }
 
