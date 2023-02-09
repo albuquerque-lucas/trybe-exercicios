@@ -1,0 +1,69 @@
+body{
+  background-color: rgb(36, 34, 34);
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+body main{
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.form-main{
+  display: flex;
+  flex-direction: column;
+}
+
+body main #textarea{
+  width: 40vw;
+  resize: none;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: .5rem;
+  margin: 1rem 0;
+}
+
+.second-validation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#options-list{
+  width: 8rem;
+  height: 1.5rem;
+  text-align: center;
+  margin: .5rem 0;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.option{
+  height: 1.5rem;
+  font-weight: bold;
+  padding: .4rem;
+}
+
+#validation-btn{
+  margin-top: 1rem;
+  padding: .5rem;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 15px;
+  font-size: 1.1rem;
+}
+
+#validation-btn:hover{
+  box-shadow: 0 0 5px 1px white;
+  text-shadow: 0 0 2px white;
+}
+
+#output-text{
+  font-size: 1.1rem;
+}

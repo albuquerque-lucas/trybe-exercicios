@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <section class="form-container">
+      <form action="" class="form-main">
+        <label for="textarea">Texto a ser validado:</label>
+        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+        <div class="second-validation">
+          <label for="options">Opções de validação:</label>
+          <select name="options" id="options-list">
+          </select>
+          <button id="validation-btn">Validar</button>
+        </div>
+      </form>
+      <div class="output">
+        <p id="output-text">Resultado da validação aqui.</p>
+      </div>
+    </section>
+  </main>
+  <script src="./src/js/main.js" type="module"></script>
+</body>
+</html>
